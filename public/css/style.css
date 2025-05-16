@@ -1,0 +1,124 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+/* navbar */
+.navbar {
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-compass {
+    color: #fe444d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+/* footer */
+.f-info {
+    height: 5rem;
+    background-color: #ebebeb;
+}
+
+.f-info-socials, .f-info-brands, .f-info-links {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-info-socials i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a :hover {
+    text-decoration: dashed;
+}
+
+/* cards */
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem !important;
+}
+
+.card-img-top {
+    width: 100% !important;
+    border-radius: 0.7rem !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-links {
+    text-decoration: none;
+    color: #222222;
+}
+
+/* new page */
+.add-btn {
+    border: none !important;
+    color: #fe444d !important;
+}
+
+/* edit page */
+.edit-btn {
+    border: none !important;
+    color: #fe444d !important;
+}
+
+/* show page */
+.show-img {
+    height: 30vh !important;
+}
+
+.show-card {
+    padding: 0;
+}
+
+.btns {
+    display: flex;
+}
+
+/* search */
+
+.search-btn {
+    background-color: #fe444d !important;
+    color:white !important;
+    border-radius: 25px !important;
+    padding: 0 1rem 0 1rem !important;
+}
+
+.search-btn :hover {
+    background-color: #fe444d;
+    color: white;
+}
+
+.search-btn i {
+    display: inline;
+    margin-right: 0.5rem;
+}
+
+.search-inp {
+    border-radius: 25px !important;
+    padding: 0.5rem 1rem 0.5rem 2.5rem !important;
+}
