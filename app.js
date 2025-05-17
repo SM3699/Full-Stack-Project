@@ -109,7 +109,7 @@ app.use("/", userRouter);
 
 
 
-app.all("/listings", (req, res, next) => {
+app.use("/listings", (req, res, next) => {
     next(new ExpressError(404, "Page Not Found!"));
 });
 
