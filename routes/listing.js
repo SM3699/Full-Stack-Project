@@ -30,7 +30,7 @@ router.get("/new", isLoggedIn, listingController.renderNewForm );
 
 // Show, Update & Delete Route
 // router
-//     .route(":/id")
+//     .route("/:id")
 //     .get( wrapAsync(listingController.showListing))
 //     .put( isLoggedIn, isOwner, wrapAsync(listingController.updateListing))
 //     .delete( isLoggedIn, isOwner, wrapAsync(listingController.destroyListing));
