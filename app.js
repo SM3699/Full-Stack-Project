@@ -101,6 +101,8 @@ app.use((req, res, next) => {
 //     res.render("./listings/home.ejs");
 // });
 
+
+
 //All Listing Routes Middleware
 console.log("Listing");
 app.use("/listings", listingRouter);
@@ -118,12 +120,12 @@ app.use("/", userRouter);
 //     next(new ExpressError(404, "Page Not Found!"));
 // });
 
-// console.log("err");
-// app.use((err, req, res, next) => {
-//     let { statusCode = 500, message = "Something Went Wrong!" } = err;
-//     res.status(statusCode).render("error.ejs", { message });
-//     // res.status(statusCode).send(message);
-// });
+console.log("err");
+app.use((err, req, res, next) => {
+    let { statusCode = 500, message = "Something Went Wrong!" } = err;
+    res.status(statusCode).render("error.ejs", { message });
+    // res.status(statusCode).send(message);
+});
 
 
 
