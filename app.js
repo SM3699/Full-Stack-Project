@@ -98,7 +98,7 @@ app.use((req, res, next) => {
 });
 
 app.use("/", (req, res) => {
-    res.render("/listings/home.ejs");
+    res.render("./listings/home.ejs");
 });
 
 //All Listing Routes Middleware
