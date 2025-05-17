@@ -113,10 +113,10 @@ app.use("/listings/:id/reviews", reviewRouter);
 console.log("user");
 app.use("/", userRouter);
 
-console.log("all err");
-app.all("*", (req, res, next) => {
-    next(new ExpressError(404, "Page Not Found!"));
-});
+// console.log("all err");
+// app.all("*", (req, res, next) => {
+//     next(new ExpressError(404, "Page Not Found!"));
+// });
 
 console.log("err");
 app.use((err, req, res, next) => {
