@@ -97,6 +97,10 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use("/", (req, res) => {
+    res.send("Home Page");
+});
+
 //All Listing Routes Middleware
 app.use("/listings", listingRouter);
 
