@@ -97,9 +97,9 @@ app.use((req, res, next) => {
     next();
 });
 
-// app.use("/", (req, res) => {
-//     res.render("./listings/home.ejs");
-// });
+app.get("/", (req, res) => {
+    res.render("./listings/home.ejs");
+});
 
 
 
