@@ -102,21 +102,25 @@ app.use((req, res, next) => {
 // });
 
 //All Listing Routes Middleware
+console.log("Listing");
 app.use("/listings", listingRouter);
 
 //All Reviews  Routes Middleware_____:
+console.log("Review");
 app.use("/listings/:id/reviews", reviewRouter);
 
 //All User Routes Middleware
+console.log("user");
 app.use("/", userRouter);
 
-
+console.log("err");
 app.use((err, req, res, next) => {
     let { statusCode = 500, message = "Something Went Wrong!" } = err;
     res.status(statusCode).render("error.ejs", { message });
     // res.status(statusCode).send(message);
 });
 
+console.log("all err");
 app.all("*", (req, res, next) => {
     next(new ExpressError(404, "Page Not Found!"));
 });
