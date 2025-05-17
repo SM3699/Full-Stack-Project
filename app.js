@@ -111,17 +111,16 @@ app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
 
-
-
-app.all("*", (req, res, next) => {
-    next(new ExpressError(404, "Page Not Found!"));
-});
-
 app.use((err, req, res, next) => {
     let { statusCode = 500, message = "Something Went Wrong!" } = err;
     res.status(statusCode).render("error.ejs", { message });
     // res.status(statusCode).send(message);
 });
+
+app.all("*", (req, res, next) => {
+    next(new ExpressError(404, "Page Not Found!"));
+});
+
 
 app.listen(8080, () => {
     console.log("Server Started..");
