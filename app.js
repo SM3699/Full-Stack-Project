@@ -97,9 +97,9 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use("/", (req, res) => {
-    res.send("Home Page");
-});
+// app.use("/", (req, res) => {
+//     res.send("Home Page");
+// });
 
 //All Listing Routes Middleware
 app.use("/listings", listingRouter);
@@ -113,9 +113,9 @@ app.use("/", userRouter);
 
 
 
-app.use("/listings", (req, res, next) => {
-    next(new ExpressError(404, "Page Not Found!"));
-});
+// app.use("/listings", (req, res, next) => {
+//     next(new ExpressError(404, "Page Not Found!"));
+// });
 
 app.use((err, req, res, next) => {
     let { statusCode = 500, message = "Something Went Wrong!" } = err;
